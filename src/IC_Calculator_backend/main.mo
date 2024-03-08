@@ -1,7 +1,7 @@
 import Float "mo:base/Float";
 
 // Step 1 -  Define a mutable variable called `counter`.
-actor Calculator {
+actor _Calculator {
 
   var counter : Float = 0;
 
@@ -41,7 +41,8 @@ actor Calculator {
 
   // Step 8 - Implement power
   public func power(x : Float) : async Float {
-    return counter ** x;
+    counter := counter ** x;
+    return counter
     //
   };
 
