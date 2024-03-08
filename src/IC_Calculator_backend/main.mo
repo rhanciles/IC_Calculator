@@ -25,13 +25,8 @@ actor Calculator {
 
   // Step 5 - Implement Divide.
   public func div(x : Float) : async ?Float {
-    if (x == 0) {
-      // 'null' returns error when the division value is zero .
-      return null;
-    } else {
-      counter /= x;
-      return ?counter;
-    };
+    counter /= x;
+    return ?counter;
   };
 
   // Step 6 - Implement reset - Clear calculator and reset counter to zero.
@@ -51,14 +46,13 @@ actor Calculator {
   };
 
   // Step 9 - Implement sqrt
-  public func sqrt(x : Float) : async Float {
-    counter := x;
-    return counter;
+  public func sqrt() : async Float {
+    return Float.sqrt(counter);
     //
   };
 
   // Step 10 - Implement floor.
-  public func floor(counter : Float) : async Int {
+  public func floor() : async Int {
     //Converting the counter floor value to the Int from Float.
     return Float.toInt(Float.floor(counter));
   };
